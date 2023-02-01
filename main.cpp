@@ -23,7 +23,7 @@ int main(){
 
   vector<string> studentsName;
 
-  cout << "[1] Add " << endl;
+  cout << "[1] Enlist " << endl;
   cout << "[2] List" << endl;
   cout << "[3] Delete" << endl;
   cout << "[4] Update" << endl;
