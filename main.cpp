@@ -23,7 +23,7 @@ int main(){
 
   vector<string> studentsName;
 
-  cout << "[1] Enlist " << endl;
+  cout << "[1] Add " << endl;
   cout << "[2] List" << endl;
   cout << "[3] Delete" << endl;
   cout << "[4] Update" << endl;
@@ -45,8 +45,7 @@ int main(){
         string name;
 
         cout << "Enter name: ";
-        cin.ignore();
-        getline(cin, name);
+        getline(cin >> ws, name);
 
         studentsName.push_back(name);
 
@@ -68,8 +67,7 @@ int main(){
         string name;
 
         cout << "Enter the name to be deleted: ";
-        cin.ignore();
-        getline(cin, name);
+        getline(cin >> ws, name);
 
         int index = findName (name, studentsName);
 
@@ -92,8 +90,7 @@ int main(){
         string name;
 
         cout << "Enter the name to be updated: ";
-        cin.ignore();
-        getline(cin, name);
+        getline(cin >> ws, name);
 
         int index = findName (name, studentsName);
 
@@ -102,16 +99,18 @@ int main(){
             cout << name << " not found" << endl;
 
         break;
+
       }
 
         string newName;
 
             cout << "Enter new name: ";
-            cin >> newName;
+            getline(cin >> ws, newName);
 
             studentsName[index] = newName;
 
         break;
+
       }
   }
 }
